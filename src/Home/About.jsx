@@ -6,7 +6,7 @@ const About = () => {
 
 
 
-        <div className="hero w-full  bg-[#0a192f] text-white">
+        <div id='about' className="hero w-full  bg-[#0a192f] text-white">
 
 
             <div>

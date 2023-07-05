@@ -57,7 +57,7 @@ const Work = () => {
 
 
     return (
-        <div name='skills' className=' text-gray-300 w-full  '>
+        <div id='work' name='skills' className=' text-gray-300 w-full  '>
             <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
                 <div>
                     <p className='text-4xl  py-4 inline font-bold border-b-4 border-pink-600  '>Projects</p>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../../public/logo.jpg'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
+// import { Link } from 'react-router-dom';
 
 
 
@@ -68,11 +69,11 @@ const Navbar = () => {
             </Link>
         </li> */}
 
-        <li><Link to='/ '>Home</Link></li>
-        <li><Link to=' '>About</Link></li>
-        <li><Link to=' '>Skills</Link></li>
-        <li><Link to=' '>Works</Link></li>
-        <li><Link to=' '>Contacts</Link></li>
+        <li><a href="#home"  >Home</a></li>
+        <li><a href="#about"  >About</a></li>
+        <li><a href="#skill">Skills</a></li>
+        <li><a href='#work '>Works</a></li>
+        <li><a href='#contact '>Contacts</a></li>
 
 
 
@@ -82,7 +83,7 @@ const Navbar = () => {
         <div>
 
 
-            <div className="navbar bg-[#0e2446] text-black">
+            <div className="navbar  fixed  z-10 bg-opacity-80 bg-[#0e2446] text-black">
                 <div className="navbar-start ">
                     <div className="dropdown">
 

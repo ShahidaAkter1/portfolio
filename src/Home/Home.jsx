@@ -12,7 +12,7 @@ import Contact from './Contact';
 
 const Home = () => {
     return (
-        <div className='bg-[#0a192f] text-white' name='home'>
+        <div id='home' className='bg-[#0a192f] text-white' name='home'>
 
 
          
