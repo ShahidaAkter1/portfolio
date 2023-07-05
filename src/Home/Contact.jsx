@@ -1,25 +1,42 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
 
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    const handleChange = (e) => {
-        setFormData((prevData) => ({
-            ...prevData,
-            [e.target.name]: e.target.value
-        }));
-    };
+    emailjs.sendForm('service_rpce64n', 
+    'template_t1k90cj',
+     form.current, 'ux5lTHXEuz49dDg-J')
+    
+      .then((result) => {
+          console.log(result);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // TODO: Implement form submission logic here
-        console.log(formData);
-    };
+
+    // const [formData, setFormData] = useState({
+    //     name: '',
+    //     email: '',
+    //     message: ''
+    // });
+
+    // const handleChange = (e) => {
+    //     setFormData((prevData) => ({
+    //         ...prevData,
+    //         [e.target.name]: e.target.value
+    //     }));
+    // };
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     // TODO: Implement form submission logic here
+    //     console.log(formData);
+    // };
 
 
 
@@ -32,7 +49,7 @@ const Contact = () => {
                 </div>
 
 
-                <form onSubmit={handleSubmit} className="w-full mx-auto">
+                <form ref={form} onSubmit={sendEmail} className="w-full mx-auto">
                     <div className="mb-4">
                         <label htmlFor="name" className="block text-white-700 font-bold mb-2">
                             Name
@@ -40,26 +57,24 @@ const Contact = () => {
                         <input
                             type="text"
                             id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            className="  border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline "
+                            name="from_name"
+                        
+                            className="  border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline "
                             placeholder="Your Name"
                             required
                         />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="email" className="block text-white-700 font-bold mb-2">
+                    <label htmlFor="email" className="block text-white-700 font-bold mb-2">
                             Email
                         </label>
                         <input
                             type="email"
                             id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className=" border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="example@example.com"
+                            name="from_email"
+                            
+                            className=" border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
+                            placeholder="example@gmail.com"
                             required
                         />
                     </div>
@@ -70,16 +85,15 @@ const Contact = () => {
                         <textarea
                             id="message"
                             name="message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline h-32 resize-none"
+                          
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline h-32 resize-none"
                             placeholder="Your Message"
                             required
                         />
                     </div>
                     <div className="flex justify-center">
                         <button
-                            type="submit"
+                            type="submit" value="Send"
                             className=" btn btn-secondary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         >
                             Let's Collaborate

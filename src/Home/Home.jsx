@@ -7,7 +7,7 @@ import About from './About';
 import Skills from './Skills';
 import Work from './Work';
 import Contact from './Contact';
-// import Experience from './Experience';
+
  
 
 const Home = () => {
