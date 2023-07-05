@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import useProjects from '../hooks/useProjects';
+// import image from '../../public/html.png'
 
 const Details = () => {
     const projectId=useParams();

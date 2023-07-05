@@ -19,7 +19,7 @@ const img_hosting_token = import.meta.env.VITE_Image_Upload_Token;
 
 const AddProjects = () => {
 
-    const [options,setOptions]=useState(['HTML','CSS','JS','React'])
+    const [options,setOptions]=useState(['HTML','CSS','JS','React','Mern'])
     const [features,setFeatures]=useState([]);
     console.log("features array :",features);
 
@@ -131,9 +131,9 @@ const AddProjects = () => {
                             <div className="form-control  ">
                                 <label className="label"> <span className="label-text text-black">Server Side Link  </span> </label>
                                 <input type="text"
-                                    {...register("serverLink", { required: true, maxLength: 100 })} placeholder="Enter your  server link  "
+                                  placeholder="Enter your  server link  "
                                     className="input input-border bg-white border border-sky-300 text-black" />
-                                {errors.className && <span className='text-red-600 mt-2'>Server side link field is required</span>}
+                                {errors.className && <span className='text-red-600 mt-2'>Server side link field </span>}
                             </div>
 
                             <div className="form-control  ">
@@ -157,7 +157,7 @@ const AddProjects = () => {
                             <div className="form-control  ">
                                 <label className="label"> <span className="label-text text-black">Project Short Description </span> </label>
                                 <textarea
-                                    {...register("description", { required: true, maxLength: 100 })}
+                                    {...register("description", { required: true, maxLength: 700 })}
                                     className="textarea textarea-accent bg-white text-black" placeholder="Short description"></textarea>
                                 {errors.className && <span className='text-red-600 mt-2'>Short description field is required</span>}
                             </div>
@@ -168,6 +168,12 @@ const AddProjects = () => {
                             <div className="form-control  ">
                                 <label className="label"> <span className="label-text text-black">Features</span> </label>
 
+
+                                <textarea
+                                    {...register("description", { required: true, maxLength: 1000 })}
+                                    className="textarea textarea-accent bg-white text-black" placeholder="Features"></textarea>
+                                {errors.className && <span className='text-red-600 mt-2'>Feature field is required</span>}
+{/* 
                                 <Multiselect
 
                                 isObject={false}
@@ -180,7 +186,7 @@ const AddProjects = () => {
                                  }}
                                 showCheckbox
                                  
-                                ></Multiselect>
+                                ></Multiselect> */}
                             </div>
 
                       
@@ -195,6 +201,7 @@ const AddProjects = () => {
                                     <option>HTML & CSS</option>
                                     <option>JavaScript</option>
                                     <option>React JS</option>
+                                    <option>Mern</option>
                                 </select>
                                 {errors.className && <span className='text-red-600 mt-2'>Category   field is required</span>}
                             </div>

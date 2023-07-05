@@ -8,6 +8,7 @@ import WorkDetails from './WorkDetails';
 const Work = () => {
 
     const [state,setState]=useState(true);
+    const [uniqueId, setUniqueId]= useState(null);
 
 
     const [projects] = useProjects();
@@ -21,6 +22,8 @@ const Work = () => {
 
     const js = projects.filter(reactData => reactData.category === 'JavaScript');
     // console.log( 'js data', js);
+    const mern = projects.filter(reactData => reactData.category === 'MERN');
+    // console.log( 'mern data', mern);
 
 
 
@@ -46,6 +49,10 @@ const Work = () => {
             setState(false);
             setShowData(html);
         }
+        else if (type === 'mern') {
+            setState(false);
+            setShowData(mern);
+        }
 
 
     }
@@ -66,10 +73,11 @@ const Work = () => {
 
                 {/* button */}
                 <div className='gap-8 mx-auto '>
-                    <button onClick={() => handleData('all')} className="btn btn-outline btn-warning m-4">ALL</button>
-                    <button onClick={() => handleData('html')} className="btn btn-outline btn-primary m-4">HTML & CSS</button>
-                    <button onClick={() => handleData('js')} className="btn btn-outline btn-secondary m-4">JAVASCRIPT</button>
-                    <button onClick={() => handleData('react')} className="btn btn-outline btn-error m-4">REACT JS</button>
+                    <button onClick={() => handleData('all')} className="btn btn-outline btn-warning font-bold text-2xl m-4">ALL</button>
+                    <button onClick={() => handleData('html')} className="btn btn-outline btn-primary m-4 font-bold text-2xl">HTML & CSS</button>
+                    <button onClick={() => handleData('js')} className="btn btn-outline btn-secondary m-4 font-bold text-2xl">JAVASCRIPT</button>
+                    <button onClick={() => handleData('react')} className="btn btn-outline btn-error m-4 font-bold text-2xl">REACT JS</button>
+                    <button onClick={() => handleData('mern')} className="btn btn-outline btn-warning m-4 font-bold text-2xl">  MERN</button>
                 </div>
 
                 {/* container  */}
@@ -79,6 +87,7 @@ const Work = () => {
                         projects.map(categoryData => <WorkDetails
                             key={categoryData._id}
                             categoryData={categoryData}
+                       
                         ></WorkDetails>)
                     }
 

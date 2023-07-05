@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const WorkDetails = ({categoryData}) => {
     // console.log(categoryData);
-    const {_id,category,clientLink,description,features,image,liveLink,projectName,serverLink}=categoryData;
+    const {_id,category,clientLink,description,features,image,liveLink,projectName,serverLink, setUniqueId}=categoryData;
 
     return (
         <div style={{ backgroundImage: `url(${image})` }}  className='shadow-lg shadow-[#040c16]  duration-500 group container rounded-md flex justify-center items-center mx-auto content-div'>
@@ -19,7 +19,9 @@ const WorkDetails = ({categoryData}) => {
                 <Link to={liveLink}> <button className="btn btn-primary text-white">Live Link</button></Link>
               <Link to={`/details/${_id}`}>   <button  className="btn btn-secondary text-white">Details</button></Link>
 
-                 {/* <button className="btn btn-secondary text-white" onClick={()=>window.my_modal_5.showModal(clientLink)}>Project Details</button> */}
+                 {/* <button className="btn btn-secondary text-white" onClick={()=>window.my_modal_5.showModal()}>Project Details</button> */}
+
+
                 {/* <label htmlFor="my_modal_6" className="btn">open modal</label> */}
 
             </div>
