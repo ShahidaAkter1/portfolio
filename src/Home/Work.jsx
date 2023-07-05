@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import useProjects from '../hooks/useProjects';
 import WorkDetails from './WorkDetails';
+// import Modal from './Modal';
 
 const Work = () => {
 
@@ -88,6 +89,7 @@ const Work = () => {
                             categoryData={categoryData}
                         ></WorkDetails>)
                     }
+                    {/* <Modal></Modal> */}
 
                 </div>
 

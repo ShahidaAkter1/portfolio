@@ -123,7 +123,7 @@ const AddProjects = () => {
                                 <input type="text"
                                     {...register("projectName", { required: true, maxLength: 100 })}
                                     placeholder="Enter your project name"
-                                    className="input input-bordered bg-white border border-sky-300 text-black" />
+                                    className="input input-border bg-white border border-sky-300 text-black" />
                                 {errors.className && <span className='text-red-600 mt-2'>Project name field is required</span>}
                             </div>
 
@@ -132,7 +132,7 @@ const AddProjects = () => {
                                 <label className="label"> <span className="label-text text-black">Server Side Link  </span> </label>
                                 <input type="text"
                                     {...register("serverLink", { required: true, maxLength: 100 })} placeholder="Enter your  server link  "
-                                    className="input input-bordered bg-white border border-sky-300 text-black" />
+                                    className="input input-border bg-white border border-sky-300 text-black" />
                                 {errors.className && <span className='text-red-600 mt-2'>Server side link field is required</span>}
                             </div>
 
@@ -140,7 +140,7 @@ const AddProjects = () => {
                                 <label className="label"> <span className="label-text text-black">Client Side Link  </span> </label>
                                 <input type="text"
                                     {...register("clientLink", { required: true, maxLength: 100 })} placeholder="Enter your  client link  "
-                                    className="input input-bordered bg-white border border-sky-300 text-black" />
+                                    className="input input-border bg-white border border-sky-300 text-black" />
                                 {errors.className && <span className='text-red-600 mt-2'>Client side link field is required</span>}
                             </div>
 
@@ -148,7 +148,7 @@ const AddProjects = () => {
                                 <label className="label"> <span className="label-text text-black">  Live Link  </span> </label>
                                 <input type="text"
                                     {...register("liveLink", { required: true, maxLength: 100 })} placeholder="Enter your  github  link  "
-                                    className="input input-bordered bg-white border border-sky-300 text-black" />
+                                    className="input input-border bg-white border border-sky-300 text-black" />
                                 {errors.className && <span className='text-red-600 mt-2'>   live link field is required</span>}
                             </div>
 

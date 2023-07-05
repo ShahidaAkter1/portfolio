@@ -20,7 +20,7 @@ const About = () => {
 
                 <div className="hero-content flex-col lg:flex-row gap-8 ">
 
-                    <div className="pt-4 w-[500px]" >
+                    <div className="pt-4 " >
 
                         {/* <p className="py-6 text-4xl text-right">Hi. I'm client,nice to meet  <br />you.Please take a look <br /> around</p> */}
                         <img  src={animation} alt="" />
