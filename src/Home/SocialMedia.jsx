@@ -11,7 +11,7 @@ const SocialMedia = () => {
                 <Link to='/' className='flex justify-between items-center w-full text-gray-300 ml-4'> Facebook <FaFacebook className='mr-6 text-2xl'></FaFacebook> </Link>
             </li>
             <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-green-600'>
-                <Link to='/' className='flex justify-between items-center w-full text-gray-300 ml-4'> Github <FaGithub className='mr-6 text-2xl'></FaGithub> </Link>
+                <Link to='https://github.com/ShahidaAkter1' className='flex justify-between items-center w-full text-gray-300 ml-4'> Github <FaGithub className='mr-6 text-2xl'></FaGithub> </Link>
             </li>
             <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[0px] duration-300 bg-gray-600'>
                 <Link to='/' className='flex justify-between items-center w-full text-gray-300 ml-4'> Linkedin <FaLinkedin className='mr-6 text-2xl'></FaLinkedin> </Link>
@@ -25,3 +25,19 @@ const SocialMedia = () => {
 };
 
 export default SocialMedia;
+
+
+/*
+image scroll------------    
+
+<div className="relative max-w-full h-72 overflow-hidden rounded-lg">
+<div className="h-max w-full transition-transform duration-[5000ms] ease-linear transform translate-y-0 hover:-translate-y-[calc(100%-18rem)] rounded-lg">
+<img
+src="https://i.ibb.co/.../Whats-App-Image-2023-06-14-at-8-32..."
+alt=""
+className="w-full object-cover object-top rounded-lg"
+/>
+</div>
+</div>
+
+*/

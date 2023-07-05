@@ -28,7 +28,7 @@ const Contact = () => {
             <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full mb-24'>
                 <div>
                     <p className='text-4xl  py-4 inline font-bold border-b-4 border-pink-600  '>Contact</p>
-                    <p className='py-12'>Submit the form below or shoot me an email - <span className='text-pink-600 underline cursor-pointer'>js.rana0326@gmail.com</span></p>
+                    <p className='py-12'>Submit the form below or shoot me an email - <span className='text-pink-600 underline cursor-pointer'>shahida0200@gmail.com</span></p>
                 </div>
 
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../../public/logo1.png'
+import logo from '../../public/logo.jpg'
 import { Link } from 'react-router-dom';
 
 
@@ -99,8 +99,11 @@ const Navbar = () => {
                         </ul>
 
                     </div>
-                    <div>
+                    <div className='flex gap-4 items-center'>
                         <img src={logo} className='h-[40px] ml-4 rounded-full ' alt="" />
+                        <div>
+                            <h1 className='font-bold text-4xl italic uppercase'>Shahida Akter</h1>
+                        </div>
                     </div>
 
 

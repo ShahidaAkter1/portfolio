@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Photo from '../../public/logo1.png'
+
 import useProjects from '../hooks/useProjects';
 import WorkDetails from './WorkDetails';
 
